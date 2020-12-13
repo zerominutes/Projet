@@ -1,0 +1,22 @@
+<mat-toolbar class="navB">
+<span color="warn"></span>
+    
+    <div class="example-button-container">
+        <a mat-mini-fab color="warn" [routerLink]="['']" aria-label="home icon " style="margin-right:-25px">
+          <mat-icon>home</mat-icon> 
+        </a>
+      </div>
+      <a mat-button color="warn" disabled >
+        <mat-icon></mat-icon>0 MINUTES <strong>ADMIN</strong>
+    </a>
+    <span class="example-spacer"></span>
+    <a mat-button color="warn" [routerLink]="['list-medecin']">List médecins</a>
+    <a mat-button color="warn" [routerLink]="['list-patient']">List patients</a>
+    <a mat-button color="warn" [routerLink]="['list-dossiers']">Dossiers Médicaux</a>
+    <a mat-button color="warn" [routerLink]="['list-rendez-vous']">Rendez vous</a> 
+    
+  </mat-toolbar>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
