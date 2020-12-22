@@ -10,12 +10,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./list-medecins-patient.component.css']
 })
 export class ListMedecinsPatientComponent implements OnInit {
-
-  medecins: Medecin[];
+term: string;
+  medecinss=[
+  {speciality:'généraliste',id:1,adresse:'fgyjdj',email:'lldjhg@gmail.com',nom:'test1',password:'', rdvs:[],consultations:[], username:''},
+  {speciality:'généraliste',id:2,adresse:'jjjhhjjhkkj',email:'jhgh@gmail.com',nom:'test2',password:'',rdvs:[],consultations:[],username:''},
+  {speciality:'généraliste',id:2,adresse:'jjjhhjjhkkj',email:'jhgh@gmail.com',nom:'test2',password:'',rdvs:[],consultations:[],username:''},
+  {speciality:'généraliste',id:2,adresse:'jjjhhjjhkkj',email:'jhgh@gmail.com',nom:'test2',password:'',rdvs:[],consultations:[],username:''},
+  {speciality:'dentiste',id:3,adresse:'jjjhhjjhkkj',email:'jhgh@gmail.com',nom:'test3',password:'',rdvs:[],consultations:[],username:''},
+  {speciality:'dentiste',id:3,adresse:'jjjhhjjhkkj',email:'jhgh@gmail.com',nom:'test3',password:'',rdvs:[],consultations:[],username:''}];
   displayedColumns: string[] = ['id', 'name','username', 'adresse', 'email', 'speciality','actions'];
   dataSource: MatTableDataSource<Medecin>;
   message: any;
   
+
   constructor(
     private medecinService: MedecinService,
     private router: Router,

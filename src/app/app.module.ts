@@ -29,7 +29,10 @@ import { ListConsultationsComponent } from './consultations/list-consultations/l
 import { AddDossierComponent } from './dossiers/add-dossier/add-dossier.component';
 import { ListDossiersComponent } from './dossiers/list-dossiers/list-dossiers.component';
 import { ListMedecinsPatientComponent } from './list-medecins-patient/list-medecins-patient.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ToastrModule , ToastContainerModule} from 'ngx-toastr';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,7 @@ import { ListMedecinsPatientComponent } from './list-medecins-patient/list-medec
     AddDossierComponent,
     ListDossiersComponent,
     ListMedecinsPatientComponent,
+    LoginComponent
    
   ],
   imports: [
@@ -54,14 +58,21 @@ import { ListMedecinsPatientComponent } from './list-medecins-patient/list-medec
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
-    MatSelectModule
+    Ng2SearchPipeModule,
+    MatSelectModule,
+    ToastrModule.forRoot({timeOut:3000,
+    positionClass:'toast-bottom-center',}),
+    ToastContainerModule,
+    BrowserAnimationsModule,
+    ConfirmationPopoverModule.forRoot({
+        confirmButtonType: 'danger'}) 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,13 +11,13 @@ import { AddDossierComponent } from './dossiers/add-dossier/add-dossier.componen
 import { ListDossiersComponent } from './dossiers/list-dossiers/list-dossiers.component';
 import { AddConsultationComponent } from './consultations/add-consultation/add-consultation.component';
 import { ListMedecinsPatientComponent } from './list-medecins-patient/list-medecins-patient.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-
   {path : 'list-patient', component: ListPatientsComponent},
   {path : 'list-medecins-patient', component: ListMedecinsPatientComponent},
   {path : 'new-patient' , component: AddPatientComponent},
-  {path : '', component: HomeComponent, pathMatch: 'full'},
+  {path : '', component:   LoginComponent  , pathMatch: 'full'},
   {path : 'edit-patient/:id' , component: AddPatientComponent},
   {path : 'list-medecin', component: ListMedecinsComponent},
   {path : 'new-medecin' , component: AddMedecinComponent},
@@ -29,7 +29,10 @@ const routes: Routes = [
   {path : 'new-dossier' , component: AddDossierComponent},
   {path : 'edit-dossier/:id' , component: AddDossierComponent},
   {path : 'edit-dossier/:id/edit-consultation/:consult_id' , component: AddConsultationComponent},
-  
+  {path : 'login', component: LoginComponent},
+  {path : 'home', component: HomeComponent},
+
+
   ];
 
 @NgModule({

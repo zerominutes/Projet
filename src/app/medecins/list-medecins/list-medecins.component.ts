@@ -15,6 +15,8 @@ export class ListMedecinsComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name','username', 'adresse', 'email', 'speciality','actions'];
   dataSource: MatTableDataSource<Medecin>;
   message: any;
+  popoverTitle:string="Cofirmer";
+  popoverMessage:string="Voulez-Vous Supprimer ";
   
   constructor(
     private medecinService: MedecinService,

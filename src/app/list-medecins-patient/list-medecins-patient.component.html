@@ -1,20 +1,22 @@
 
-    <input type="text" class="form-control col-md-2 float-sm-right  " placeholder="Search Here" >
-<table>
-    <tr  style="font-weight: bold;">
-    <td>
-    <div class="card col" style="width:400px">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-    </div>
-    </td>
-    </tr>
+<div class="image"></div>
+<div class=" contenu">
+        <div class="form-group justify-content-center">
+            <input type="text" class="form-control col-md-2 float-sm-right  " placeholder="Search Here" [(ngModel)]="term">
+          </div>
+   <table class="text-center" style="background-color: transparent; width: 100%; font-weight: bold;">
+    <tbody>
+        <tr *ngFor="let med of medecinss | filter:term" >
+            <td  rowspan="3">                
+                <img  src="../assets/imageonline-co-transparentimage1.png" style="height: 150px; "><br>
+                {{med.nom}}<br>
+               {{med.email}}
+            </td>
+        </tr>
+    </tbody>
+    </table>
     
-</table>
- 
+</div>
+    
 
     
